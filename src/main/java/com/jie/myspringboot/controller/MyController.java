@@ -23,7 +23,10 @@ public class MyController {
     @RequestMapping("/out")
     @ResponseBody //将返回的对象JSON序列化
     public String out(Date date){
-        return aa;
+
+        System.out.println("这是一个测试");
+
+     return aa;
     }
 
 }
