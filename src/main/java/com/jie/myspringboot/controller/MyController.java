@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import java.util.Date;
+import java.util.List;
 
 @Controller
 public class MyController {
@@ -22,6 +23,26 @@ public class MyController {
     @Resource
     private EUserService eUserService;
 
+    @RequestMapping("/s")
+    public String toLogin(){
+        return "login";
+    }
+
+
+/*
+
+    @RequestMapping("/login" method = RequestMethod.POST)
+    @ResponseBody
+    public String login(String account,String password){
+        EUser user= eUserService.getUserInfo(account,password);
+        if(user==null){
+            System.out.println("未查询到信息");
+        }else{
+            return("查询到信息:用户昵称是"+user.getE_name());
+        }
+        return "yes";
+    }
+*/
 
     @RequestMapping("/")
     public String toIndex(){
@@ -31,7 +52,8 @@ public class MyController {
     @RequestMapping("/out")
     @ResponseBody //将返回的对象JSON序列化
     public String out(){
-   EUser user= eUserService.getUser();
+   List<EUser> user;
+        user = eUserService.getUser();
         System.out.println(user.toString());
      return aa;
     }

@@ -15,6 +15,10 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
     username: root
     password:
+  resources:
+    static-locations: classpath:/static/
+  freemarker:
+    template-loader-path: classpath:/templates/
 mybatis:
   config-location: classpath:/mybatis/mybatis-config.xml
   mapper-locations: classpath:/mybatis/mapper/*.xml

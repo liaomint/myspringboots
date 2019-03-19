@@ -6,6 +6,7 @@ import com.jie.myspringboot.service.EUserService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @Service
 public class EUserServiceImpl implements EUserService {
@@ -13,7 +14,13 @@ public class EUserServiceImpl implements EUserService {
     private UserDao userDao=null;
 
     @Override
-    public EUser getUser() {
+    public List<EUser> getUser() {
         return  userDao.getUserInfo();
     }
+    public EUser getUserInfo(String account,String password){
+        return userDao.getUserInfos(account,password);
+    }
+
+
+
 }
