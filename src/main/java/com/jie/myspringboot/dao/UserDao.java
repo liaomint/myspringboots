@@ -7,8 +7,8 @@ import java.util.List;
 
 @Mapper
 public interface UserDao {
-    public List<EUser> getUserInfo();
 
-    public EUser getUserInfos(String account,String password);
+
+    public EUser getUserInfo(String account,String password);
 
 }

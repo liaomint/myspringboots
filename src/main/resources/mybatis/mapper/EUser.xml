@@ -4,14 +4,7 @@
 
 <mapper namespace="com.jie.myspringboot.dao.UserDao">
 
-
-
-
     <select id="getUserInfo" resultType="com.jie.myspringboot.pojo.EUser">
-        SELECT * FROM z_enews_user
-    </select>
-
-    <select id="getUserInfos" resultType="com.jie.myspringboot.pojo.EUser">
         SELECT * FROM z_enews_user where e_account=#{account} and e_password=#{password}
     </select>
 

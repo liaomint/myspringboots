@@ -1,6 +1,6 @@
 debug: false
 server:
-  port: 8082
+  port: 8089
 
 spring:
   http:
@@ -11,12 +11,12 @@ spring:
   mvc:
     date-format: yyyy-mm-dd
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
     username: root
     password:
   resources:
-    static-locations: classpath:/static/
+    static-locations: classpath:/public/
   freemarker:
     template-loader-path: classpath:/templates/
 mybatis:
