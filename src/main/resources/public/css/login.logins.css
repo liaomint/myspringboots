@@ -1,0 +1,146 @@
+
+body {
+    overflow-y: scroll;
+    background-color: #fff;
+    font-family: myFirstFont;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url('../../font/SourceHanSansK-ExtraLight.ttf')
+}
+
+.area {
+    margin: 20px auto 0px auto;
+}
+
+.mui-input-group {
+    margin-top: 10px;
+}
+
+.mui-input-group:first-child {
+    margin-top: 20px;
+}
+
+.mui-input-group label {
+    width: 22%;
+}
+
+.mui-input-row label ~ input,
+.mui-input-row label ~ select,
+.mui-input-row label ~ textarea {
+    width: 78%;
+}
+
+.mui-checkbox input[type=checkbox],
+.mui-radio input[type=radio] {
+    top: 6px;
+}
+
+.mui-content-padded {
+    margin-top: 25px;
+}
+
+.mui-btn {
+    padding: 10px;
+}
+
+.link-area {
+    display: block;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.spliter {
+    color: #bbb;
+    padding: 0px 8px;
+}
+
+.oauth-area {
+    position: absolute;
+    bottom: 20px;
+    left: 0px;
+    text-align: center;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+.oauth-area .oauth-btn {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-size: 30px 30px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 0px 20px;
+    /*-webkit-filter: grayscale(100%); */
+    border: solid 1px #ddd;
+    border-radius: 25px;
+}
+
+.oauth-area .oauth-btn:active {
+    border: solid 1px #aaa;
+}
+
+.oauth-area .oauth-btn.disabled {
+    background-color: #ddd;
+}
+
+
+#input-pass::-webkit-input-placeholder {
+    color: #fff;
+    font-family: myFirstFont;
+}
+
+#input-test::-webkit-input-placeholder {
+    color: #fff;
+    font-family: myFirstFont;
+}
+.bg{
+    margin: 0px auto;
+    width: 90%;
+    height: 63%;
+    padding: 10px;
+    position: absolute;
+    padding-top: 5%;
+    top: 7%;
+    left: 5%;
+    border-radius:15px;
+    background-color: rgba(0, 0, 0, 0.24);
+}
+
+.password{
+    border-left:0px;
+    border-radius:0px ;
+    color: #fff;
+    font-size: 19px;
+    border-right:0px ;
+    height: 45px;
+    border-top:0px ;
+    border-bottom:1px solid #fff;
+    box-shadow: 0px 1px 0px 0px #E4E3E2;
+    background-color: transparent;
+    text-shadow:3px 1px 6px #000;
+}
+.account{
+    border-radius:0px ;
+    color: #fff;
+    height: 45px;
+    margin: 0px;
+    border-left:0px;
+    border-right:0px ;
+    font-size: 19px;
+    border-top:0px ;
+    border-bottom:1px solid #fff;
+    box-shadow: 0px 1px 0px 0px #E4E3E2;
+    background-color: transparent;
+    text-shadow:3px 1px 6px #000;
+}
+#input-text::-moz-placeholder {
+/ / 不知道为何火狐的placeholder的颜色是粉红色，怎么改都不行，希望有大牛路过帮忙指点 color: #fff;
+}
+
+#input-text:-ms-input-placeholder {
+/ / 由于我的IE刚好是IE9，支持不了placeholder，所以也测试不了(⊙﹏⊙) ，有IE10以上的娃可以帮我试试 color: #fff;
+}
