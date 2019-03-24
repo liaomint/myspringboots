@@ -1,60 +1,232 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        z<link href="css/mui.min.css" rel="stylesheet" />
+<html class="ui-page-login">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" href="css/mui.min.css" />
+    <script src="js/mui.min.js"></script>
+    <style>
+        body{
+            overflow-y:scroll;
+            background-color: #fff;
+            font-family:myFirstFont;
+
+        }
+        @font-face
+        {
+            font-family: myFirstFont;
+            src: url('fonts/SourceHanSansK-ExtraLight.ttf')
+        }
+
+        }
+        .area {
+            margin: 20px auto 0px auto;
+        }
+
+        .mui-input-group {
+            margin-top: 10px;
+        }
+
+        .mui-input-group:first-child {
+            margin-top: 20px;
+        }
+
+        .mui-input-group label {
+            width: 22%;
+        }
+
+        .mui-input-row label~input,
+        .mui-input-row label~select,
+        .mui-input-row label~textarea {
+            width: 78%;
+        }
+
+        .mui-checkbox input[type=checkbox],
+        .mui-radio input[type=radio] {
+            top: 6px;
+        }
+
+        .mui-content-padded {
+            margin-top: 25px;
+        }
+
+        .mui-btn {
+            padding: 10px;
+        }
+
+        .link-area {
+            display: block;
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        .spliter {
+            color:#bbb;
+            padding: 0px 8px;
+        }
+
+        .oauth-area {
+            position: absolute;
+            bottom: 20px;
+            left: 0px;
+            text-align: center;
+            width: 100%;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .oauth-area .oauth-btn {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-size: 30px 30px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            margin: 0px 20px;
+            /*-webkit-filter: grayscale(100%); */
+            border: solid 1px #ddd;
+            border-radius: 25px;
+        }
+
+        .oauth-area .oauth-btn:active {
+            border: solid 1px #aaa;
+        }
+
+        .oauth-area .oauth-btn.disabled {
+            background-color: #ddd;
+        }
+
+
+
+        #input-pass::-webkit-input-placeholder{
+            color: #fff;
+            font-family:myFirstFont;
+        }
+
+        #input-test::-webkit-input-placeholder{
+            color: #fff;
+            font-family:myFirstFont;
+        }
+        #input-text::-moz-placeholder{  //不知道为何火狐的placeholder的颜色是粉红色，怎么改都不行，希望有大牛路过帮忙指点
+        color: #fff;
+        }
+        #input-text:-ms-input-placeholder{  //由于我的IE刚好是IE9，支持不了placeholder，所以也测试不了(⊙﹏⊙)，有IE10以上的娃可以帮我试试
+        color: #fff;
+        }
+    </style>
 </head>
 
 <body>
-<div id="op">
-    <form class="mui-input-group">
-        <div class="mui-input-row">
-            <label>用户名</label>
-            <input type="text" id="account" class="mui-input-clear" placeholder="请输入用户名">
+<div class="mui-content" style="  background:url(images/15.jpg)no-repeat;
+    width:100%;
+    height:100%;
+    background-size:100% 100%;
+    position:absolute;  ">
+    <div    style=" margin: 0px auto;
+    width: 90%;
+    height: 63%;
+    padding: 10px;
+    position: absolute;
+    padding-top: 5%;
+    top: 7%;
+    left: 5%;
+    border-radius:15px;
+   background-color: rgba(0, 0, 0, 0.24);
+    ">
+
+        <div id="test">
+
+        <div style="margin: 0px auto; width: 100px; height: 100px;">
+            <span><img src="images/nan.png" style="max-width: 80px; vertical-align: middle;"></span>
         </div>
-        <div class="mui-input-row">
-            <label>密码</label>
-            <input id="password" type="password" class="mui-input-password" placeholder="请输入密码">
+         <form >
+        <div style="height: 50px;width: 100%;"  >
+            <input type="text" placeholder="账号/手机号" list="list"  id="input-test" style="
+           	border-radius:0px ;
+            color: #fff;
+            height: 45px;
+           	margin: 0px;
+           	border-left:0px;
+           	border-right:0px ;
+           	font-size: 19px;
+           	border-top:0px ;
+           	 border-bottom:1px solid #fff;
+           	 box-shadow: 0px 1px 0px 0px #E4E3E2;
+           	 background-color: transparent;
+           	 text-shadow:3px 1px 6px #000;
+           	 " />
+
+            <datalist id="list">
+                <option>790</option>
+                <option>791</option>
+                <option>123456</option>
+                <option>123312</option>
+                <option>5123</option>
+                <option>64573</option>
+            </datalist>
         </div>
-        <div class="mui-button-row">
-            <button type="button" id="ok" class="mui-btn mui-btn-primary" >确认</button>
-            <button type="button" class="mui-btn mui-btn-danger" >取消</button>
+        <input type="password" placeholder="密码" id="input-pass" style="border-left:0px;
+           	border-radius:0px ;
+           	color: #fff;
+           	font-size: 19px;
+           	border-right:0px ;
+           	height: 45px;
+           	border-top:0px ;
+           	 border-bottom:1px solid #fff;
+           	 box-shadow: 0px 1px 0px 0px #E4E3E2;
+           	 	 background-color: transparent;
+           	 	 text-shadow:3px 1px 6px #000;
+           	" />
+        <div class="mui-content-padded" style="margin: 20px 0px 0px 0px ;">
+            <button id='login' type="submit" class="mui-btn mui-btn-block mui-btn-primary" style="border:0; font-size:19px ;   background-color: #R207 G0 B112;">登录</button>
+            <div class="link-area">
+                <a id='reg'  style="color: #fff; float: left;">忘记密码？</a>
+                <a id='forgetPassword' style="color: #fff; float: right;">新用户注册</a>
+            </div>
         </div>
-    </form>
+</form>
+    </div>
+    </div>
+
+
+    <script type="text/javascript">
+
+        mui("#test").on("click","#login",function () {
+            var url='/login';
+            var id=mui("#")
+            mui.ajax(url,{
+                data:{
+                    account:"123456",
+                    password:"admin"
+                },
+                dataType: 'json',
+                type:'post',
+                timeout:10000,
+                success:function (data) {
+                 if(Number(data.error_code)==0){
+                     mui.openWindow({
+                         url:'/myspringboots/templates/Luckdraw.html',
+                         extras:{
+                             name:'mui'  //扩展参数
+                         }
+                     });
+                 }else{
+         mui.alert(data.error_msg);
+                 }
+                }
+            })
+        })
+    </script>
+
+
+     	<div class="mui-content-padded oauth-area">
+             <h5 style="font-size: 14px;color: #fff"> 登录即代表阅读并同意<a style="color:#fff;">服务条款</a>
+               </h5>
+               </div>
+         </div>
+
 </div>
-<script src="js/mui.min.js"></script>
-<script type="text/javascript">
-
-    mui("#op").on("tap","#ok",function(){
-
-        var account= mui("#account")[0].value;
-        var password= mui("#password")[0].value;
-        var url="http://127.0.0.1:8089/aaa";
-        mui.ajax(url,{
-        	async:false,
-            data:{
-                login:account,
-                pass:password
-            },
-            dataType: 'JSON',
-            type:'POST',
-            headers:{'Content-Type':'application/json'},
-            success:function(data){
-                //服务器返回响应，根据响应结果，分析是否登录成功；
-
-            },
-            error:function(xhr,type,errorThrown){
-                //异常处理；
-                console.log(type);
-            }
-
-        });
-
-    })
-
-</script>
 </body>
-
 </html>

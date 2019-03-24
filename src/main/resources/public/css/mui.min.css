@@ -3931,7 +3931,7 @@ select:focus {
 	font-family: Muiicons;
 	font-weight: 400;
 	font-style: normal;
-	src: url(../../font/mui.ttf) format('truetype');
+	src: url(fonts/mui.ttf) format('truetype');
 }
 
 .mui-icon {

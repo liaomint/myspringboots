@@ -13,10 +13,10 @@ public class EUserServiceImpl implements EUserService {
     @Resource
     private UserDao userDao=null;
 
-/*    @Override
-    public List<EUser> getUser() {
-        return  userDao.getUserInfo();
-    }*/
+   @Override
+    public EUser getUser() {
+        return  userDao.infoList();
+    }
     public EUser getUserInfo(String account,String password){
         return userDao.getUserInfo(account,password);
     }
